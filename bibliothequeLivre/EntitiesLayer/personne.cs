@@ -8,5 +8,21 @@ namespace EntitiesLayer
 {
     public class personne
     {
+        String DateNaissance { get; set; }
+        String Nom { get; set; }
+        String Prenom { get; set; }
+        enum sexe { homme, femme };
+
+
+
+        void toString()
+        {
+            String Personne;
+            Personne = this.get + this.get;
+        
+        
+        
+        }
+
     }
 }
