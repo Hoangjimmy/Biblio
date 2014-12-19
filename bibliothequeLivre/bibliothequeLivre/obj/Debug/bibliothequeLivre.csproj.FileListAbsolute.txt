@@ -1,5 +1,0 @@
-H:\ServiceReseau\Projet\bin\bibliothequeLivre.exe.config
-H:\ServiceReseau\Projet\bin\bibliothequeLivre.exe
-H:\ServiceReseau\Projet\bin\bibliothequeLivre.pdb
-H:\ServiceReseau\Projet\bibliothequeLivre\bibliothequeLivre\obj\Debug\bibliothequeLivre.exe
-H:\ServiceReseau\Projet\bibliothequeLivre\bibliothequeLivre\obj\Debug\bibliothequeLivre.pdb
