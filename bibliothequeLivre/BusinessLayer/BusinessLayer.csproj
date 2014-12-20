@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BiblioManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
+      <Project>{f4f5affa-d9a0-4cc3-9a05-dad41b6aaca6}</Project>
+      <Name>EntitiesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StubDataAccessLayer\StubDataAccessLayer.csproj">
+      <Project>{d6c852e1-10cf-449f-8054-e57bb4d35bcf}</Project>
+      <Name>StubDataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
