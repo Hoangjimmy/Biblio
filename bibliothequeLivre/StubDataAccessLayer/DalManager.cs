@@ -26,9 +26,9 @@ namespace StubDataAccessLayer
             Auteurs.Add(new Auteur("Joanne", "Rowling", ESexe.Feminin, new DateTime(1965, 07, 31), new DateTime(), true));
             Auteurs.Add(new Auteur("David Carroll", "Eddings", ESexe.Masculin, new DateTime(1931, 07, 07), new DateTime(2009, 06, 02), true));
 
-            Livres.Add(new Livre(Auteurs[2], new DateTime(1989, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, "Le Trône de diamant"));
-            Livres.Add(new Livre(Auteurs[2], new DateTime(1990, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, "Le Chevalier de rubis"));
-            Livres.Add(new Livre(Auteurs[2], new DateTime(1991, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, "La Rose de saphir"));
+            Livres.Add(new Livre(Auteurs[2], new DateTime(1989, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 4, "Le Trône de diamant"));
+            Livres.Add(new Livre(Auteurs[2], new DateTime(1990, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 8, "Le Chevalier de rubis"));
+            Livres.Add(new Livre(Auteurs[2], new DateTime(1991, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 9, "La Rose de saphir"));
 
             Emprunteurs.Add(new Emprunteur("Antoine", "Gueleraud", ESexe.Masculin, new DateTime(1993, 08, 17), "Clermont-Ferrand", "antoine.gueleraud@gmail.com", "0615589076"));
             Emprunteurs.Add(new Emprunteur("Jimmy", "Hoang", ESexe.Masculin, new DateTime(1992, 01, 01), "Clermont-Ferrand", "hoangjim@poste.isima.fr", "xxxxxxxxxx"));

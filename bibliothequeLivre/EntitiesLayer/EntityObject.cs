@@ -16,7 +16,7 @@ namespace EntitiesLayer
 
         public EntityObject()
         {
-
+            Id = 0;
         }
 
         public override bool Equals(Object o)

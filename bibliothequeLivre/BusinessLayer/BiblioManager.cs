@@ -28,7 +28,7 @@ namespace BusinessLayer
         {
             List<String> resultat = new List<string>();
 
-            List<Auteur> auteurs = _dal.Auteurs.Where(a => a.PrixGoncourt == true).ToList();
+            IEnumerable<Auteur> auteurs = _dal.Auteurs.Where(a => a.PrixGoncourt == true);
 
             foreach (Auteur a in auteurs)
                 resultat.Add(a.ToString());
@@ -46,6 +46,13 @@ namespace BusinessLayer
         public List<String> listeDesLivresAvecNoteSuperieurACinqEtAuteurAvecPrixGoncourt()
         {
             List<String> resultat = new List<string>();
+
+            IEnumerable<Auteur> auteurs = _dal.Auteurs.Where(a => a.PrixGoncourt == true);
+
+            IEnumerable<Livre> livres = _dal.Livres.Where(l => /*auteurs.Contains(l.Auteur) &&*/ l.Note > 5);
+
+            foreach (Livre l in livres)
+                resultat.Add(l.ToString());
 
             return resultat;
         }

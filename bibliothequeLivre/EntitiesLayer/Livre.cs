@@ -14,21 +14,23 @@ namespace EntitiesLayer
         public Genre Genre { get; set; }
         public String ISBN { get; set; }
         public int NombrePages { get; set; }
+        public int Note { get; set; }
         public String Titre { get; set; }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder("Livre : ");
-            sb.Append(Auteur.ToString()).Append(", ")
-                .Append(DateParution).Append(", ")
+            sb.Append("(").Append(Auteur.ToString()).Append("), ")
+                .Append(DateParution.Year).Append(", ")
                 .Append(Editeur).Append(", ")
                 .Append(Genre).Append(", ")
                 .Append(NombrePages).Append(", ")
+                .Append(Note).Append(", ")
                 .Append(Titre);
             return sb.ToString();
         }
 
-        public Livre(Auteur auteur, DateTime dateParution, String editeur, Genre genre, String isbn, int nombrePages, String titre)
+        public Livre(Auteur auteur, DateTime dateParution, String editeur, Genre genre, String isbn, int nombrePages, int note, String titre)
         {
             Auteur = auteur;
             DateParution = dateParution;
@@ -36,6 +38,7 @@ namespace EntitiesLayer
             Genre = genre;
             ISBN = isbn;
             NombrePages = nombrePages;
+            Note = note;
             Titre = titre;
         }
     }

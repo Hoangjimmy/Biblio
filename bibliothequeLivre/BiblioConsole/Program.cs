@@ -13,10 +13,15 @@ namespace BiblioConsole
         static void Main(string[] args)
         {
             BiblioManager biblioManager = new BiblioManager();
-            List<String> res = biblioManager.listeDesAuteursAvecPrixGoncourt();
 
             Console.WriteLine("Liste des Auteurs avec prix goncourt");
+            List<String> res = biblioManager.listeDesAuteursAvecPrixGoncourt();
             foreach (String s in res)
+                Console.WriteLine(s);
+
+            Console.WriteLine("\nListe des Livres de note > 5 avec auteur qui a gagné prix goncourt");
+            List<String> res2 = biblioManager.listeDesLivresAvecNoteSuperieurACinqEtAuteurAvecPrixGoncourt();
+            foreach (String s in res2)
                 Console.WriteLine(s);
 
             Console.ReadLine();
