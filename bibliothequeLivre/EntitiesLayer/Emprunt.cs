@@ -8,10 +8,10 @@ namespace EntitiesLayer
 {
     public class Emprunt : EntityObject
     {
-        DateTime DateDebut{get;set;}
-        DateTime DateFin{get;set;}
-        Emprunteur Emprunter{get; set;}
-        Livre Livre {get; set;}
+        public DateTime DateDebut { get; set; }
+        public DateTime DateFin { get; set; }
+        public Emprunteur Emprunter { get; set; }
+        public Livre Livre { get; set; }
 
         public Emprunt(DateTime debut, DateTime fin, Emprunteur emprunter, Livre livre)
              : base()
@@ -22,7 +22,7 @@ namespace EntitiesLayer
             this.Livre = livre;
         }
 
-        public String ToString()
+        public override string ToString()
         {
             StringBuilder emprunt = new StringBuilder("Emprunt : ");
             emprunt.Append(DateDebut).Append(" ").Append(DateFin).Append(" ").Append(Emprunter).Append(" ").Append(Livre);

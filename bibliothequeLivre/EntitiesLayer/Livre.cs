@@ -19,7 +19,7 @@ namespace EntitiesLayer
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder("Livre : ");
-            sb.Append(Auteur.toString()).Append(", ")
+            sb.Append(Auteur.ToString()).Append(", ")
                 .Append(DateParution).Append(", ")
                 .Append(Editeur).Append(", ")
                 .Append(Genre).Append(", ")

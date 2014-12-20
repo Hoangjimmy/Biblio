@@ -8,9 +8,9 @@ namespace EntitiesLayer
 {
     public class Emprunteur : Personne
     {
-        String Adresse { get; set;}
-        String Email { get; set; }
-        String Tel { get; set; }
+        public String Adresse { get; set; }
+        public String Email { get; set; }
+        public String Tel { get; set; }
 
         public Emprunteur(String prenom, String nom, ESexe sex, DateTime naissance, String addr, String mail, String tel)
             : base(prenom, nom, sex, naissance)
@@ -24,7 +24,7 @@ namespace EntitiesLayer
         {
     
             StringBuilder emprunt = new StringBuilder("Emprunteur : ");
-            emprunt.Append(Nom).Append(" ").Append(Prenom).Append(" ").Append(DateNaissance).Append(" ").Append(emprunt.getSexe()).
+            emprunt.Append(Nom).Append(" ").Append(Prenom).Append(" ").Append(DateNaissance).Append(" ").Append(Sexe).
             Append(" ").Append(Adresse).Append(" ").Append(Email).Append(" ").Append(Tel);
             return emprunt.ToString();     
         }

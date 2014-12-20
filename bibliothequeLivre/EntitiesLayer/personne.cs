@@ -29,10 +29,10 @@ namespace EntitiesLayer
             this.Sexe = sex;
         }
 
-        public String toString()
+        public override string ToString()
         {
             StringBuilder person = new StringBuilder("Personne : ");
-            person.Append(Nom).Append(" ").Append(Prenom).Append(" ").Append(DateNaissance).Append(" ").Append(Sexe);
+            person.Append(Nom).Append(" ").Append(Prenom).Append(" né(e) le ").Append(DateNaissance.ToLongDateString()).Append(" de sexe ").Append(Sexe);
             return person.ToString();
         }
 
