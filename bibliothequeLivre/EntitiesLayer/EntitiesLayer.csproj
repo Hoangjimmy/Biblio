@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,12 +42,11 @@
     <Compile Include="Auteur.cs" />
     <Compile Include="Emprunt.cs" />
     <Compile Include="Emprunteur.cs" />
-    <Compile Include="Personne.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="EntityObject.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Livre.cs" />
-    <Compile Include="personne.cs" />
+    <Compile Include="Personne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

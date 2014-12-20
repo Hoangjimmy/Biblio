@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    public class personne
+    public class Personne
     {
         String DateNaissance { get; set; }
         String Nom { get; set; }
@@ -17,11 +17,8 @@ namespace EntitiesLayer
 
         void toString()
         {
-            String Personne;
-            Personne = this.get + this.get;
-        
-        
-        
+            String personne;
+            personne = this.get + this.get;
         }
 
     }
