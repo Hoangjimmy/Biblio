@@ -1,5 +1,0 @@
-C:\Users\antoi_000\Programmes\C#\Service Reseau\ProjetBiblio\bin\BusinessLayer.dll
-C:\Users\antoi_000\Programmes\C#\Service Reseau\ProjetBiblio\bin\BusinessLayer.pdb
-C:\Users\antoi_000\Programmes\C#\Service Reseau\ProjetBiblio\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Users\antoi_000\Programmes\C#\Service Reseau\ProjetBiblio\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\Users\antoi_000\Programmes\C#\Service Reseau\ProjetBiblio\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -1,1 +1,5 @@
 bin/*
+bibliothequeLivre/StubDataAccessLayer/obj/*
+bibliothequeLivre/EntitiesLayer/obj/*
+bibliothequeLivre/BiblioConsole/obj/*
+bibliothequeLivre/BusinessLayer/obj/*

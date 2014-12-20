@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    public class Personne
+    public enum ESexe
     {
-        String DateNaissance { get; set; }
-        String Nom { get; set; }
-        String Prenom { get; set; }
-        enum sexe { homme, femme };
+        Feminin,
+        Masculin,
+        Indetermine
+    }
 
+    public class Personne : EntityObject
+    {
+        public DateTime DateNaissance { get; protected set; }
+        public String Prenom { get; protected set; }
+        public String Nom { get; protected set; }
+        public ESexe Sexe { get; protected set; }
 
-
-        void toString()
+        public Personne(DateTime date, String prenom, String nom, ESexe sex)
+            : base()
         {
-            String personne;
-            personne = this.get + this.get;
+            this.DateNaissance = date;
+            this.Prenom = prenom;
+            this.Nom = nom;
+            this.Sexe = sex;
+        }
+
+        public String toString()
+        {
+            StringBuilder person = new StringBuilder("Personne : ");
+            person.Append(Nom).Append(" ").Append(Prenom).Append(" ").Append(DateNaissance).Append(" ").Append(Sexe);
+            return person.ToString();
         }
 
     }
