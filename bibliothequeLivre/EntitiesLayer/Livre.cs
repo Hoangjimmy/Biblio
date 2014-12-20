@@ -8,8 +8,8 @@ namespace EntitiesLayer
 {
     public class Livre : EntityObject
     {
-        public String Auteur { get; set; }
-        public DateTime DateParution{ get; set; }
+        public Auteur Auteur { get; set; }
+        public DateTime DateParution { get; set; }
         public String Editeur { get; set; }
         public Genre Genre { get; set; }
         public String ISBN { get; set; }
@@ -19,7 +19,7 @@ namespace EntitiesLayer
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder("Livre : ");
-            sb.Append(Auteur).Append(", ")
+            sb.Append(Auteur.toString()).Append(", ")
                 .Append(DateParution).Append(", ")
                 .Append(Editeur).Append(", ")
                 .Append(Genre).Append(", ")
@@ -28,7 +28,7 @@ namespace EntitiesLayer
             return sb.ToString();
         }
 
-        public Livre(String auteur, DateTime dateParution, String editeur, Genre genre, String isbn, int nombrePages, String titre)
+        public Livre(Auteur auteur, DateTime dateParution, String editeur, Genre genre, String isbn, int nombrePages, String titre)
         {
             Auteur = auteur;
             DateParution = dateParution;
@@ -37,5 +37,6 @@ namespace EntitiesLayer
             ISBN = isbn;
             NombrePages = nombrePages;
             Titre = titre;
+        }
     }
 }
