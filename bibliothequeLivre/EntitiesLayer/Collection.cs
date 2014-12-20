@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    class Collection : EntityObject
+    public class Collection : EntityObject
     {
         public String Description { get; set; }
         public IList<Livre> Livres { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    class Livre : EntityObject
+    public class Livre : EntityObject
     {
         public String Auteur { get; set; }
         public DateTime DateParution{ get; set; }

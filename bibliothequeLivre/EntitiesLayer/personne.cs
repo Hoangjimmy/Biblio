@@ -20,10 +20,10 @@ namespace EntitiesLayer
         public String Nom { get; protected set; }
         public ESexe Sexe { get; protected set; }
 
-        public Personne(DateTime date, String prenom, String nom, ESexe sex)
+        public Personne(String prenom, String nom, ESexe sex, DateTime naissance)
             : base()
         {
-            this.DateNaissance = date;
+            this.DateNaissance = naissance;
             this.Prenom = prenom;
             this.Nom = nom;
             this.Sexe = sex;

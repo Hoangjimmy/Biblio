@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    sealed class Genre
+    public sealed class Genre
     {
         public static readonly Genre BandeDessinee = new Genre();
         public static readonly Genre Biographie = new Genre();

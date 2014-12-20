@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    class Emprunt : EntityObject
+    public class Emprunt : EntityObject
     {
         DateTime DateDebut{get;set;}
         DateTime DateFin{get;set;}

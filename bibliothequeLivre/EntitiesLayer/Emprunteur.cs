@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-    class Emprunteur : Personne
+    public class Emprunteur : Personne
     {
         String Adresse { get; set;}
         String Email { get; set; }
         String Tel { get; set; }
 
-        public Emprunteur(DateTime dat, String prenom, String nom, ESexe sex, String addr, String mail, String tel):base(dat, prenom, nom, sex)
+        public Emprunteur(String prenom, String nom, ESexe sex, DateTime naissance, String addr, String mail, String tel)
+            : base(prenom, nom, sex, naissance)
         {   
             this.Adresse = addr;
             this.Email = mail ;
