@@ -20,6 +20,10 @@ namespace BusinessLayer
         public List<String> listeDesEmpruntsEnCours()
         {
             List<String> resultat = new List<string>();
+            IEnumerable<Emprunt> emprunts = _dal.Emprunts.Where(e => e.DateFin == null);
+
+            foreach (Emprunt e in emprunts)
+                resultat.Add(e.ToString());
 
             return resultat;
         }
@@ -40,6 +44,11 @@ namespace BusinessLayer
         {
             List<String> resultat = new List<string>();
 
+            IEnumerable<Livre> livres = _dal.Livres.Where(l => l.Note < 5);
+
+            foreach (Livre l in livres)
+                resultat.Add(l.ToString());
+
             return resultat;
         }
 
@@ -47,14 +56,15 @@ namespace BusinessLayer
         {
             List<String> resultat = new List<string>();
 
-            IEnumerable<Auteur> auteurs = _dal.Auteurs.Where(a => a.PrixGoncourt == true);
+         // IEnumerable<Auteur> auteurs = _dal.Auteurs.Where(a => a.PrixGoncourt == true);
 
-            IEnumerable<Livre> livres = _dal.Livres.Where(l => /*auteurs.Contains(l.Auteur) &&*/ l.Note > 5);
+            IEnumerable<Livre> livres = _dal.Livres.Where(l =>l.Note > 5 && l.Auteur.PrixGoncourt == true);
 
             foreach (Livre l in livres)
                 resultat.Add(l.ToString());
 
             return resultat;
+ 
         }
     }
 }
