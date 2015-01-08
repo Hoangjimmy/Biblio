@@ -20,7 +20,7 @@ namespace BusinessLayer
         public List<String> listeDesEmpruntsEnCours()
         {
             List<String> resultat = new List<string>();
-            IEnumerable<Emprunt> emprunts = _dal.Emprunts.Where(e => e.DateFin == null);
+            IEnumerable<Emprunt> emprunts = _dal.Emprunts.Where(e => DateTime.Compare( (e.DateFin), DateTime.Now) < 0);
 
             foreach (Emprunt e in emprunts)
                 resultat.Add(e.ToString());

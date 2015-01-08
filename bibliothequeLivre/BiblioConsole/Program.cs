@@ -22,7 +22,7 @@ namespace BiblioConsole
                 Console.WriteLine("\n3) Liste des Livres de note supérieure à 5 ");
                 Console.WriteLine("\n4) Liste des Livres de note supérieure à 5 avec auteur qui a gagné prix goncourt");
                 Console.WriteLine("\n0) Sortie");
-                choix = Console.Read();
+                choix = int.Parse(Console.ReadLine());
                 switch (choix)
                 { 
                     case 1:
