@@ -48,7 +48,11 @@ namespace BiblioConsole
                 if (res != null)
                 {
                     foreach (String s in res)
+                    {
+                        Console.WriteLine("\n");
                         Console.WriteLine(s);
+
+                    }
                 }
             } while (choix != 0);
 
