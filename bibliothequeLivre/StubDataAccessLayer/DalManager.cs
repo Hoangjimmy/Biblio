@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntitiesLayer;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace StubDataAccessLayer
 {
@@ -36,9 +38,12 @@ namespace StubDataAccessLayer
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2014, 12, 25), Emprunteurs[0], Livres[0]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2015, 01, 12), Emprunteurs[0], Livres[1]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 01), new DateTime(2014, 12, 23), Emprunteurs[1], Livres[2]));
+
+            Utilisateurs.Add(new Utilisateur("Gueleraud","Antoine","Terred","Password"));
+            Utilisateurs.Add(new Utilisateur("Hoang", "Jimmy", "Hoangjimmy", "Password"));
         }
 
-        public Utilisateur getUtilisateurbyLogin(String logrech)
+        public Utilisateur getUtilisateurByLogin(String logrech)
         {
             Utilisateur rech = null;
             foreach(Utilisateur u in Utilisateurs)
@@ -48,6 +53,13 @@ namespace StubDataAccessLayer
                     break;
                 }
             return rech;
+        }
+        public void ToXml(String path, String name)
+        {
+            StreamWriter stream = new StreamWriter(path + "\\" + name + ".xml");
+            XmlSerializer serializer = new XmlSerializer(typeof(Livre));
+            serializer.Serialize(stream, this);
+            stream.Close();
         }
     }
 }
