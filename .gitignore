@@ -2,6 +2,7 @@ bin
 bin/*
 bibliothequeLivre/StubDataAccessLayer/obj/*
 bibliothequeLivre/EntitiesLayer/obj/*
+bibliothequeLivre/BiblioWPF/obj/*
 bibliothequeLivre/BiblioConsole/obj/*
 bibliothequeLivre/BusinessLayer/obj/*
 bibliothequeLivre/bibliothequeLivre.v11.suo
