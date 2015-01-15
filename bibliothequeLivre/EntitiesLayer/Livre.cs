@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.IO;
+
 
 namespace EntitiesLayer
 {
+    [Serializable]
     public class Livre : EntityObject
     {
         public Auteur Auteur { get; set; }
@@ -41,5 +45,6 @@ namespace EntitiesLayer
             Note = note;
             Titre = titre;
         }
+
     }
 }

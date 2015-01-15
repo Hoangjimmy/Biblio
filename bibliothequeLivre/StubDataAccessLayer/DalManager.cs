@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntitiesLayer;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace StubDataAccessLayer
 {
@@ -13,14 +15,14 @@ namespace StubDataAccessLayer
         public List<Livre> Livres { get; set; }
         public List<Emprunteur> Emprunteurs { get; set; }
         public List<Emprunt> Emprunts { get; set; }
-
+        public List<Utilisateur> Utilisateurs { get; set; }
         public DalManager()
         {
             Auteurs = new List<Auteur>();
             Livres = new List<Livre>();
             Emprunteurs = new List<Emprunteur>();
             Emprunts = new List<Emprunt>();
-
+            Utilisateurs = new List<Utilisateur>();
 
             Auteurs.Add(new Auteur("John Ronald Reuel", "Tolkien", ESexe.Masculin, new DateTime(1982, 01, 3), new DateTime(1973, 09, 02), true));
             Auteurs.Add(new Auteur("Joanne", "Rowling", ESexe.Feminin, new DateTime(1965, 07, 31), new DateTime(), true));
@@ -31,11 +33,33 @@ namespace StubDataAccessLayer
             Livres.Add(new Livre(Auteurs[2], new DateTime(1991, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 9, "La Rose de saphir"));
 
             Emprunteurs.Add(new Emprunteur("Antoine", "Gueleraud", ESexe.Masculin, new DateTime(1993, 08, 17), "Clermont-Ferrand", "antoine.gueleraud@gmail.com", "0615589076"));
-            Emprunteurs.Add(new Emprunteur("Jimmy", "Hoang", ESexe.Masculin, new DateTime(1992, 01, 01), "Clermont-Ferrand", "hoangjim@poste.isima.fr", "xxxxxxxxxx"));
+            Emprunteurs.Add(new Emprunteur("Jimmy", "Hoang", ESexe.Masculin, new DateTime(1989, 06, 05), "Clermont-Ferrand", "hoangjim@poste.isima.fr", "xxxxxxxxxx"));
 
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2014, 12, 25), Emprunteurs[0], Livres[0]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2015, 01, 12), Emprunteurs[0], Livres[1]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 01), new DateTime(2014, 12, 23), Emprunteurs[1], Livres[2]));
+
+            Utilisateurs.Add(new Utilisateur("Gueleraud","Antoine","Terred","Password"));
+            Utilisateurs.Add(new Utilisateur("Hoang", "Jimmy", "Hoangjimmy", "Password"));
+        }
+
+        public Utilisateur getUtilisateurByLogin(String logrech)
+        {
+            Utilisateur rech = null;
+            foreach(Utilisateur u in Utilisateurs)
+                if (String.Compare(logrech, u.login) == 0)
+                {
+                    rech = u;
+                    break;
+                }
+            return rech;
+        }
+        public void ToXml(String path, String name)
+        {
+            StreamWriter stream = new StreamWriter(path + "\\" + name + ".xml");
+            XmlSerializer serializer = new XmlSerializer(typeof(Livre));
+            serializer.Serialize(stream, this);
+            stream.Close();
         }
     }
 }
