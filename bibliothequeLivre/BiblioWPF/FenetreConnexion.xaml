@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BiblioWPF.FenetreConnexion"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FenetreConnexion" Height="300" Width="350" FontSize="20" Background="Gray">
+        Title="BiblioManager : Connexion" Height="300" Width="350" FontSize="20" Background="Gray">
     <StackPanel Margin="10">
         <TextBlock FontSize="30" HorizontalAlignment="Center">Connexion</TextBlock>
         <Grid Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">

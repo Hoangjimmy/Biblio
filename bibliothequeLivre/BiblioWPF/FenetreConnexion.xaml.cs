@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BusinessLayer;
+using EntitiesLayer;
 
 namespace BiblioWPF
 {
@@ -26,7 +28,16 @@ namespace BiblioWPF
 
         private void btnValider_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            if (BiblioManager.Instance.CheckConnexionUser(mTextBoxLogin.Text, mPasswordBoxPassword.Password))
+            {
+                MainWindow win = new MainWindow();
+                win.Show();
+
+                this.Close();
+            }
+            else
+                MessageBox.Show("Erreur, Veuillez réessayer !");
         }
 
 

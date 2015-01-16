@@ -16,6 +16,8 @@ namespace StubDataAccessLayer
         public List<Emprunteur> Emprunteurs { get; set; }
         public List<Emprunt> Emprunts { get; set; }
         public List<Utilisateur> Utilisateurs { get; set; }
+        public static DalManager Instance { get; set; } 
+
         public DalManager()
         {
             Auteurs = new List<Auteur>();
@@ -39,21 +41,22 @@ namespace StubDataAccessLayer
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2015, 01, 12), Emprunteurs[0], Livres[1]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 01), new DateTime(2014, 12, 23), Emprunteurs[1], Livres[2]));
 
-            Utilisateurs.Add(new Utilisateur("Gueleraud","Antoine","Terred","Password"));
+            Utilisateurs.Add(new Utilisateur("Gueleraud","Antoine","Terred","pass"));
             Utilisateurs.Add(new Utilisateur("Hoang", "Jimmy", "Hoangjimmy", "Password"));
         }
 
         public Utilisateur getUtilisateurByLogin(String logrech)
         {
             Utilisateur rech = null;
-            foreach(Utilisateur u in Utilisateurs)
-                if (String.Compare(logrech, u.login) == 0)
+            foreach (Utilisateur u in Utilisateurs)
+                if (String.Compare(logrech, u.Login) == 0)
                 {
                     rech = u;
                     break;
                 }
             return rech;
         }
+
         public void ToXml(String path, String name)
         {
             StreamWriter stream = new StreamWriter(path + "\\" + name + ".xml");

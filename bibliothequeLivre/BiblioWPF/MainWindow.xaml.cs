@@ -23,6 +23,10 @@ namespace BiblioWPF
         public MainWindow()
         {
             InitializeComponent();
+            /*ContentControl c = new ContentControl();
+            c.Content = BusinessLayer.BiblioManager.Instance.listeDesAuteursAvecPrixGoncourt();
+            c.ContentTemplate = (DataTemplate)FindResource("Auteur");
+            mStackPanelContenu.Children.Add(c);*/
         }
     }
 }

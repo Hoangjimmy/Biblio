@@ -11,6 +11,18 @@ namespace BusinessLayer
     public class BiblioManager
     {
         private DalManager _dal;
+
+        private static BiblioManager instance;
+
+        public static BiblioManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new BiblioManager();
+                return instance;
+            }
+        } 
         
         public BiblioManager()
         {
@@ -64,7 +76,16 @@ namespace BusinessLayer
                 resultat.Add(l.ToString());
 
             return resultat;
- 
+        }
+
+        public bool CheckConnexionUser(String login, String password)
+        {
+            Utilisateur user = _dal.getUtilisateurByLogin(login);
+            if (user != null)
+            {
+                return user.Password == password;
+            }
+            return false;
         }
     }
 }

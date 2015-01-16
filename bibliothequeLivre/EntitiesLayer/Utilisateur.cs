@@ -9,17 +9,17 @@ namespace EntitiesLayer
     public class Utilisateur
     {
 
-        public String nom { get; set; }
-        public String prenom { get; set; }
-        public String login { get; set; }
-        public String password { get; set; }
+        public String Nom { get; set; }
+        public String Prenom { get; set; }
+        public String Login { get; set; }
+        public String Password { get; set; }
 
         public Utilisateur(String n, String p, String l , String pass) 
         {
-            this.nom = nom;
-            this.prenom = p;
-            this.login = l;
-            this.password = pass;
+            this.Nom = n;
+            this.Prenom = p;
+            this.Login = l;
+            this.Password = pass;
         }
 
     }
