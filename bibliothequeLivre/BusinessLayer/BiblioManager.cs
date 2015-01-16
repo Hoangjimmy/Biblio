@@ -87,5 +87,10 @@ namespace BusinessLayer
             }
             return false;
         }
+
+        public static void exportLivres(string path)
+        {
+            DalManager.Instance.ToXml(path);
+        }
     }
 }

@@ -2,27 +2,27 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:my="clr-namespace:BusinessLayer"
-        Title="BiblioManager" Height="350" Width="525">
+        Title="BiblioManager" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <DataTemplate x:Key="Auteur">
+        <!--<DataTemplate x:Key="Auteur">
             <StackPanel>
                 <TextBlock Text="{Binding Path=Nom}" />
             </StackPanel>
-        </DataTemplate>
+        </DataTemplate>-->
     </Window.Resources>
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <TextBlock>BiblioManager</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <Button>Emprunts</Button>
-                <Button>Auteurs</Button>
-                <Button>Livres > 5</Button>
-                <Button>Livres > 5 et prix Goncourt</Button>
-                <Button>Exporter</Button>
+                <Button Click="btnEmprunts_Click">Emprunts</Button>
+                <Button Click="btnAuteurs_Click">Auteurs</Button>
+                <Button Click="btnLivreSup5_Click">Livres > 5</Button>
+                <Button Click="btnLivreSup5EtGoncourt_Click">Livres > 5 et prix Goncourt</Button>
+                <Button Click="btnExporter_Click">Exporter</Button>
             </StackPanel>
         </StackPanel>
-        <StackPanel Name="mStackPanelContenu">
-            
-        </StackPanel>
+        <ListBox Name="mListBoxContenu">
+
+        </ListBox>
     </DockPanel>
 </Window>

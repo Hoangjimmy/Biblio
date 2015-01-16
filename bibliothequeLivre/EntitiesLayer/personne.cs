@@ -15,10 +15,12 @@ namespace EntitiesLayer
 
     public class Personne : EntityObject
     {
-        public DateTime DateNaissance { get; protected set; }
-        public String Prenom { get; protected set; }
-        public String Nom { get; protected set; }
-        public ESexe Sexe { get; protected set; }
+        public DateTime DateNaissance { get; set; }
+        public String Prenom { get; set; }
+        public String Nom { get; set; }
+        public ESexe Sexe { get; set; }
+
+        public Personne() { }
 
         public Personne(String prenom, String nom, ESexe sex, DateTime naissance)
             : base()

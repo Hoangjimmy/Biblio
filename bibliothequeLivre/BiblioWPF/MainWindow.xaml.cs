@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BusinessLayer;
+using Microsoft.Win32;
 
 namespace BiblioWPF
 {
@@ -23,10 +25,33 @@ namespace BiblioWPF
         public MainWindow()
         {
             InitializeComponent();
-            /*ContentControl c = new ContentControl();
-            c.Content = BusinessLayer.BiblioManager.Instance.listeDesAuteursAvecPrixGoncourt();
-            c.ContentTemplate = (DataTemplate)FindResource("Auteur");
-            mStackPanelContenu.Children.Add(c);*/
+        }
+
+        private void btnEmprunts_Click(object sender, RoutedEventArgs e)
+        {
+            mListBoxContenu.ItemsSource = BiblioManager.Instance.listeDesEmpruntsEnCours();
+        }
+
+        private void btnAuteurs_Click(object sender, RoutedEventArgs e)
+        {
+            mListBoxContenu.ItemsSource = BiblioManager.Instance.listeDesAuteursAvecPrixGoncourt();
+        }
+
+        private void btnLivreSup5_Click(object sender, RoutedEventArgs e)
+        {
+            mListBoxContenu.ItemsSource = BiblioManager.Instance.listeDesLivresAvecNoteSuperieurACinq();
+        }
+
+        private void btnLivreSup5EtGoncourt_Click(object sender, RoutedEventArgs e)
+        {
+            mListBoxContenu.ItemsSource = BiblioManager.Instance.listeDesLivresAvecNoteSuperieurACinqEtAuteurAvecPrixGoncourt();
+        }
+
+        private void btnExporter_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.ShowDialog();
+            BiblioManager.exportLivres(dialog.FileName);
         }
     }
 }

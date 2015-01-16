@@ -16,7 +16,17 @@ namespace StubDataAccessLayer
         public List<Emprunteur> Emprunteurs { get; set; }
         public List<Emprunt> Emprunts { get; set; }
         public List<Utilisateur> Utilisateurs { get; set; }
-        public static DalManager Instance { get; set; } 
+        private static DalManager instance;
+
+        public static DalManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DalManager();
+                return instance;
+            }
+        } 
 
         public DalManager()
         {
@@ -57,12 +67,16 @@ namespace StubDataAccessLayer
             return rech;
         }
 
-        public void ToXml(String path, String name)
+        public void ToXml(String path)
         {
-            StreamWriter stream = new StreamWriter(path + "\\" + name + ".xml");
-            XmlSerializer serializer = new XmlSerializer(typeof(Livre));
-            serializer.Serialize(stream, this);
-            stream.Close();
+            StreamWriter stream = new StreamWriter(path + ".xml");
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Livre>));
+            serializer.Serialize(stream, Livres);
+            /*foreach (Livre l in Livres)
+            {
+                serializer.Serialize(stream, l);
+            }*/
+             stream.Close();
         }
     }
 }

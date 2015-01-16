@@ -9,7 +9,7 @@ using System.IO;
 
 namespace EntitiesLayer
 {
-    [Serializable]
+    [SerializableAttribute]
     public class Livre : EntityObject
     {
         public Auteur Auteur { get; set; }
@@ -33,6 +33,8 @@ namespace EntitiesLayer
                 .Append(Titre);
             return sb.ToString();
         }
+
+        public Livre() { }
 
         public Livre(Auteur auteur, DateTime dateParution, String editeur, Genre genre, String isbn, int nombrePages, int note, String titre)
         {
