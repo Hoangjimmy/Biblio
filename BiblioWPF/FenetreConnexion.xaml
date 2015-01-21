@@ -1,0 +1,23 @@
+﻿<Window x:Class="BiblioWPF.FenetreConnexion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BiblioManager : Connexion" Height="300" Width="350" FontSize="20" Background="Gray">
+    <StackPanel Margin="10">
+        <TextBlock FontSize="30" HorizontalAlignment="Center">Connexion</TextBlock>
+        <Grid Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="150" Width="auto"/>
+                <ColumnDefinition MinWidth="150" Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0">Login :</TextBlock>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="mTextBoxLogin"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0">Password :</TextBlock>
+            <PasswordBox Grid.Row="1" Grid.Column="1" Name="mPasswordBoxPassword"></PasswordBox>
+        </Grid>
+        <Button HorizontalAlignment="Right" Click="btnValider_Click">Valider</Button>
+    </StackPanel>
+</Window>

@@ -1,0 +1,5 @@
+H:\ServiceReseau\Projet\bin\StubDataAccessLayer.dll
+H:\ServiceReseau\Projet\bin\StubDataAccessLayer.pdb
+H:\ServiceReseau\Projet\bibliothequeLivre\StubDataAccessLayer\obj\Debug\StubDataAccessLayer.csprojResolveAssemblyReference.cache
+H:\ServiceReseau\Projet\bibliothequeLivre\StubDataAccessLayer\obj\Debug\StubDataAccessLayer.dll
+H:\ServiceReseau\Projet\bibliothequeLivre\StubDataAccessLayer\obj\Debug\StubDataAccessLayer.pdb
