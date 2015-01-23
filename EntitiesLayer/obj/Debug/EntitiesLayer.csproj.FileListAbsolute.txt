@@ -1,0 +1,5 @@
+H:\ServiceReseau\Projet\bin\EntitiesLayer.dll
+H:\ServiceReseau\Projet\bin\EntitiesLayer.pdb
+H:\ServiceReseau\Projet\bibliothequeLivre\EntitiesLayer\obj\Debug\EntitiesLayer.csprojResolveAssemblyReference.cache
+H:\ServiceReseau\Projet\bibliothequeLivre\EntitiesLayer\obj\Debug\EntitiesLayer.dll
+H:\ServiceReseau\Projet\bibliothequeLivre\EntitiesLayer\obj\Debug\EntitiesLayer.pdb
