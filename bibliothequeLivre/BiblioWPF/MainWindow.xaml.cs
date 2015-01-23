@@ -25,6 +25,8 @@ namespace BiblioWPF
         public MainWindow()
         {
             InitializeComponent();
+            Application.Current.Exit += new ExitEventHandler(exit_fenetre);
+            LoadSettings();
         }
 
         private void btnEmprunts_Click(object sender, RoutedEventArgs e)
@@ -52,6 +54,30 @@ namespace BiblioWPF
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.ShowDialog();
             BiblioManager.exportLivres(dialog.FileName);
+        }
+
+        private void exit_fenetre(object sender, ExitEventArgs e)
+        {
+            SaveSettings();
+        }
+
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.MainWindowHeight = this.Height;
+            Properties.Settings.Default.MainWindowWidth = this.Width;
+            Properties.Settings.Default.MainWindowX = this.Left;
+            Properties.Settings.Default.MainWindowY = this.Top;
+            
+            Properties.Settings.Default.Save();
+        }
+
+        private void LoadSettings()
+        {
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
+            this.Height = Properties.Settings.Default.MainWindowHeight;
+            this.Width = Properties.Settings.Default.MainWindowWidth;
+            this.Left = Properties.Settings.Default.MainWindowX;
+            this.Top = Properties.Settings.Default.MainWindowY;
         }
     }
 }
