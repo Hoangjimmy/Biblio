@@ -72,7 +72,7 @@ namespace StubDataAccessLayer
             StreamWriter stream = new StreamWriter(path + ".xml");
             XmlSerializer serializer = new XmlSerializer(typeof(List<Livre>));
             serializer.Serialize(stream, Livres);
-             stream.Close();
+            stream.Close();
         }
     }
 }

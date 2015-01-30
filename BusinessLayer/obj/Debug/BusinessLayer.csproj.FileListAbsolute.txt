@@ -1,5 +1,0 @@
-H:\ServiceReseau\Projet\bin\BusinessLayer.dll
-H:\ServiceReseau\Projet\bin\BusinessLayer.pdb
-H:\ServiceReseau\Projet\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-H:\ServiceReseau\Projet\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.dll
-H:\ServiceReseau\Projet\bibliothequeLivre\BusinessLayer\obj\Debug\BusinessLayer.pdb

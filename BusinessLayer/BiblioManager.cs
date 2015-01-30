@@ -78,6 +78,11 @@ namespace BusinessLayer
             return resultat;
         }
 
+        public static List<Emprunteur> listeEmprunteur()
+        {
+            return DalManager.Instance.Emprunteurs;
+        }
+
         public bool CheckConnexionUser(String login, String password)
         {
             Utilisateur user = _dal.getUtilisateurByLogin(login);

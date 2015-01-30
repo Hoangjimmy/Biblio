@@ -1,6 +1,0 @@
-H:\ServiceReseau\Projet\bin\BiblioConsole.exe.config
-H:\ServiceReseau\Projet\bin\BiblioConsole.exe
-H:\ServiceReseau\Projet\bin\BiblioConsole.pdb
-H:\ServiceReseau\Projet\bibliothequeLivre\BiblioConsole\obj\Debug\BiblioConsole.csprojResolveAssemblyReference.cache
-H:\ServiceReseau\Projet\bibliothequeLivre\BiblioConsole\obj\Debug\BiblioConsole.exe
-H:\ServiceReseau\Projet\bibliothequeLivre\BiblioConsole\obj\Debug\BiblioConsole.pdb

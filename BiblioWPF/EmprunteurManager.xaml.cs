@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BusinessLayer;
 
 namespace BiblioWPF
 {
@@ -22,6 +23,13 @@ namespace BiblioWPF
         public EmprunteurManager()
         {
             InitializeComponent();
+            mListeBoxEmprunteur.DataContext = BiblioManager.listeEmprunteur();
+           // mListeBoxEmprunteur.MouseLeftButtonDown += new MouseButtonEventHandler(eventButton);
+        }
+
+        private void ListView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            mGridItem.DataContext = mListeBoxEmprunteur.SelectedItem;
         }
     }
 }
