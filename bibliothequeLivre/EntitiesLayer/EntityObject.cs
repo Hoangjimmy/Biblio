@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
-   public abstract class EntityObject
+    public abstract class EntityObject : IEquatable<EntityObject>
     {
         public int Id
         {
@@ -14,12 +14,15 @@ namespace EntitiesLayer
             set;
         }
 
+        private static int cpt = 0;
+
         public EntityObject()
         {
-            Id = 0;
+            Id = cpt;
+            cpt++;
         }
 
-        public override bool Equals(Object o)
+        public bool Equals(EntityObject o)
         {
             bool equal = false;
             if (o.GetType() == typeof(EntityObject))

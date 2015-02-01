@@ -15,7 +15,7 @@ namespace EntitiesLayer
 
     public class Personne : EntityObject
     {
-        public DateTime DateNaissance { get; set; }
+        public DateTime? DateNaissance { get; set; }
         public String Prenom { get; set; }
         public String Nom { get; set; }
         public ESexe Sexe { get; set; }
@@ -34,7 +34,13 @@ namespace EntitiesLayer
         public override string ToString()
         {
             StringBuilder person = new StringBuilder("Personne : ");
-            person.Append(Nom).Append(" ").Append(Prenom).Append(" né(e) le ").Append(DateNaissance.ToLongDateString()).Append(" de sexe ").Append(Sexe);
+            person.Append(Nom).Append(" ").Append(Prenom);
+
+            if (DateNaissance != null)
+                person.Append(" né(e) le ").Append(DateNaissance.ToString());
+            else
+                person.Append(" de naissance inconnue ");
+            person.Append(" de sexe ").Append(Sexe);
             return person.ToString();
         }
 

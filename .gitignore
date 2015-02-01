@@ -1,11 +1,11 @@
 bin
 bin/*
-bibliothequeLivre/StubDataAccessLayer/obj/*
-bibliothequeLivre/EntitiesLayer/obj/*
-bibliothequeLivre/BiblioWPF/obj/*
-bibliothequeLivre/BiblioConsole/obj/*
-bibliothequeLivre/BusinessLayer/obj/*
+bibliothequeLivre/StubDataAccessLayer/obj*
+bibliothequeLivre/EntitiesLayer/obj*
+bibliothequeLivre/BiblioWPF/obj*
+bibliothequeLivre/BiblioConsole/obj*
+bibliothequeLivre/BusinessLayer/obj*
 bibliothequeLivre/bibliothequeLivre.v11.suo
 bibliothequeLivre/bibliothequeLivre.v12.suo
 
-BiblioWPF/obj/*
+BiblioWPF/obj*

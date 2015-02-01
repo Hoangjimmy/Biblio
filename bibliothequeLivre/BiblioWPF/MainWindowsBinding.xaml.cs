@@ -23,5 +23,27 @@ namespace BiblioWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Auteur(object sender, RoutedEventArgs e)
+        {
+            AutorManager win = new AutorManager();
+            win.Show();
+        }
+
+        private void Button_Click_Livres(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Emprunts(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Emprunteurs(object sender, RoutedEventArgs e)
+        {
+            EmprunteurManager win = new EmprunteurManager();
+            win.Show();
+        }
     }
 }

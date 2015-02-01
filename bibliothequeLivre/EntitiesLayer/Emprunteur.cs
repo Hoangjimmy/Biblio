@@ -20,6 +20,11 @@ namespace EntitiesLayer
             this.Tel = tel;
         }
 
+        public Emprunteur()
+        {
+            // TODO: Complete member initialization
+        }
+
         public override string ToString()
         {
     

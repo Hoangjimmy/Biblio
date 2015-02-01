@@ -46,6 +46,7 @@ namespace StubDataAccessLayer
 
             Emprunteurs.Add(new Emprunteur("Antoine", "Gueleraud", ESexe.Masculin, new DateTime(1993, 08, 17), "Clermont-Ferrand", "antoine.gueleraud@gmail.com", "0615589076"));
             Emprunteurs.Add(new Emprunteur("Jimmy", "Hoang", ESexe.Masculin, new DateTime(1989, 06, 05), "Clermont-Ferrand", "hoangjim@poste.isima.fr", "xxxxxxxxxx"));
+            Emprunteurs.Add(new Emprunteur("Choco", "Chocolat", ESexe.Indetermine, new DateTime(1535, 12, 20), "Clermont-Choc", "choco@chocolat.fr", "xxxxxxxxxx"));
 
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2014, 12, 25), Emprunteurs[0], Livres[0]));
             Emprunts.Add(new Emprunt(new DateTime(2014, 12, 18), new DateTime(2015, 01, 12), Emprunteurs[0], Livres[1]));
@@ -72,11 +73,7 @@ namespace StubDataAccessLayer
             StreamWriter stream = new StreamWriter(path + ".xml");
             XmlSerializer serializer = new XmlSerializer(typeof(List<Livre>));
             serializer.Serialize(stream, Livres);
-            /*foreach (Livre l in Livres)
-            {
-                serializer.Serialize(stream, l);
-            }*/
-             stream.Close();
+            stream.Close();
         }
     }
 }

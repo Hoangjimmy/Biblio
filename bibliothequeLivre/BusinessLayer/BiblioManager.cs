@@ -78,6 +78,11 @@ namespace BusinessLayer
             return resultat;
         }
 
+        public static List<Emprunteur> listeEmprunteur()
+        {
+            return DalManager.Instance.Emprunteurs;
+        }
+
         public bool CheckConnexionUser(String login, String password)
         {
             Utilisateur user = _dal.getUtilisateurByLogin(login);
@@ -91,6 +96,16 @@ namespace BusinessLayer
         public static void exportLivres(string path)
         {
             DalManager.Instance.ToXml(path);
+        }
+
+        public static void removeEmprunteur(Emprunteur emprunteur)
+        {
+            DalManager.Instance.Emprunteurs.Remove(emprunteur);
+        }
+
+        public static void addEmprunteur(Emprunteur emprunteur)
+        {
+            DalManager.Instance.Emprunteurs.Add(emprunteur);
         }
     }
 }
