@@ -29,25 +29,25 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Content="Nom :"/>
-                <TextBox Name="mTextBoxNom" Width="auto" Grid.Column="2" Margin="0,2,0,2" Text="{Binding Path=Nom, Mode=OneWay}"/>
+                <TextBox Name="mTextBoxNom" Width="auto" Grid.Column="1" Margin="0,2,0,2" Text="{Binding Path=Nom, Mode=OneWay}"/>
 
                 <Label Grid.Column="0" Grid.Row="1">Prénom :</Label>
-                <TextBox Name="mTextBoxPrenom" Width="auto" Grid.Row="1" Grid.Column="2" Margin="0,2,0,2" Text="{Binding Path=Prenom, Mode=OneWay}"/>
+                <TextBox Name="mTextBoxPrenom" Width="auto" Grid.Row="1" Grid.Column="1" Margin="0,2,0,2" Text="{Binding Path=Prenom, Mode=OneWay}"/>
                 
                 <Label Grid.Column="0" Grid.Row="2" Content="Date de naissance :"/>
-                <DatePicker Name="mDataPickerNaissance" Grid.Row="2" Grid.Column="2" Background="White" Margin="0,2,0,2" Text="{Binding Path=DateNaissance, Mode=OneWay, StringFormat={}{0:dd/MM/yyyy}}"/>
+                <DatePicker Name="mDataPickerNaissance" Grid.Row="2" Grid.Column="1" Background="White" Margin="0,2,0,2" Text="{Binding Path=DateNaissance, Mode=OneWay, StringFormat={}{0:dd/MM/yyyy}}"/>
                 
                 <Label Grid.Column="0" Grid.Row="3" Content="Sexe :"/>
-                <ComboBox Name="mComboBoxSexe" Grid.Column="3" Grid.Row="3" Margin="0,2,0,2" Text="{Binding Path=Sexe, Mode=OneWay}"/>
+                <ComboBox Name="mComboBoxSexe" Grid.Row="3" Grid.Column="1" Margin="0,2,0,2" Text="{Binding Path=Sexe, Mode=OneWay}"/>
                 
                 <Label Grid.Column="0" Grid.Row="4" Content="Email :"/>
-                <TextBox Name="mTextBoxEmail" Width="auto" Grid.Row="4" Grid.Column="2" Margin="0,2,0,2" Text="{Binding Path=Email, Mode=OneWay}"/>
+                <TextBox Name="mTextBoxEmail" Width="auto" Grid.Row="4" Grid.Column="1" Margin="0,2,0,2" Text="{Binding Path=Email, Mode=OneWay}"/>
                 
                 <Label Grid.Column="0" Grid.Row="5" Content="Adresse :"/>
-                <TextBox  Name="mTextBoxAdresse" Width="auto" Grid.Row="5" Grid.Column="2" Margin="0,2,0,2" Text="{Binding Path=Adresse, Mode=OneWay}"/>
+                <TextBox  Name="mTextBoxAdresse" Width="auto" Grid.Row="5" Grid.Column="1" Margin="0,2,0,2" Text="{Binding Path=Adresse, Mode=OneWay}"/>
                 
                 <Label Grid.Column="0" Grid.Row="6" Content="Téléphone :"/>
-                <TextBox Name="mTextBoxTelephone" Width="auto" Grid.Row="6" Grid.Column="2" Margin="0,2,0,2" MaxLength="10" Text="{Binding Path=Tel, Mode=OneWay}"/>
+                <TextBox Name="mTextBoxTelephone" Width="auto" Grid.Row="6" Grid.Column="1" Margin="0,2,0,2" MaxLength="10" Text="{Binding Path=Tel, Mode=OneWay}"/>
             </Grid>
 
             <StackPanel Orientation="Horizontal">

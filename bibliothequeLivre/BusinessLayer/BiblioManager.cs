@@ -78,7 +78,7 @@ namespace BusinessLayer
             return resultat;
         }
 
-        public static List<Emprunteur> listeEmprunteur()
+        public static IEnumerable<Emprunteur> listeEmprunteur()
         {
             return DalManager.Instance.Emprunteurs;
         }
@@ -106,6 +106,21 @@ namespace BusinessLayer
         public static void addEmprunteur(Emprunteur emprunteur)
         {
             DalManager.Instance.Emprunteurs.Add(emprunteur);
+        }
+
+        public static IEnumerable<Auteur> listeAuteur()
+        {
+            return DalManager.Instance.Auteurs;
+        }
+
+        public static void removeAuteur(Auteur auteur)
+        {
+            DalManager.Instance.Auteurs.Remove(auteur);
+        }
+
+        public static void addAuteur(Auteur auteur)
+        {
+            DalManager.Instance.Auteurs.Add(auteur);
         }
     }
 }

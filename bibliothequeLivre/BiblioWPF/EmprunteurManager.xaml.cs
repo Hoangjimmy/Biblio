@@ -32,12 +32,14 @@ namespace BiblioWPF
 
             reloadListe();
             desactiverFormulaire();
+            mButtonAjouter.IsEnabled = true;
         }
 
         private void desactiverFormulaire()
         {
             mButtonModifier.IsEnabled = false;
             mButtonSupprimer.IsEnabled = false;
+            mButtonAjouter.IsEnabled = false;
 
             mTextBoxAdresse.IsEnabled = false;
             mTextBoxEmail.IsEnabled = false;
@@ -52,6 +54,7 @@ namespace BiblioWPF
         {
             mButtonModifier.IsEnabled = true;
             mButtonSupprimer.IsEnabled = true;
+            mButtonAjouter.IsEnabled = true;
 
             mTextBoxAdresse.IsEnabled = true;
             mTextBoxEmail.IsEnabled = true;
@@ -81,6 +84,7 @@ namespace BiblioWPF
 
             reloadListe();
             desactiverFormulaire();
+            mButtonAjouter.IsEnabled = true;
 
             /* On vide les données emprunteur affiches */
             viderFormulaire();
@@ -89,6 +93,7 @@ namespace BiblioWPF
         private void btnAjouter_Click(object sender, RoutedEventArgs e)
         {
             activerFormulaire();
+            mButtonAjouter.IsEnabled = false;
             viderFormulaire();
             mListeBoxEmprunteur.SelectedItem = null;
         }
@@ -176,6 +181,7 @@ namespace BiblioWPF
             mListeBoxEmprunteur.SelectedItem = null;
             /** On desactive le formulaire */
             desactiverFormulaire();
+            mButtonAjouter.IsEnabled = true;
         }
 
         private void viderFormulaire()
