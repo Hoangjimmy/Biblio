@@ -1,0 +1,5 @@
+H:\ServiceReseau\Projet\bin\DataAccessLayer.dll
+H:\ServiceReseau\Projet\bin\DataAccessLayer.pdb
+H:\ServiceReseau\Projet\bibliothequeLivre\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+H:\ServiceReseau\Projet\bibliothequeLivre\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+H:\ServiceReseau\Projet\bibliothequeLivre\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
