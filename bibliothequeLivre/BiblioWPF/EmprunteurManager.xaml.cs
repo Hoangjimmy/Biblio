@@ -107,7 +107,7 @@ namespace BiblioWPF
             /** Test des donnees */
             string tel = mTextBoxTelephone.Text;
             String mail = mTextBoxEmail.Text;
-            if (tel != null)
+            if (tel != null && tel.Length > 0)
             {
                 try
                 {

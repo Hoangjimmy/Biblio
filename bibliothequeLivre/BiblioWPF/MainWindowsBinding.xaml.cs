@@ -32,7 +32,8 @@ namespace BiblioWPF
 
         private void Button_Click_Livres(object sender, RoutedEventArgs e)
         {
-
+            LivreManager win = new LivreManager();
+            win.Show();
         }
 
         private void Button_Click_Emprunts(object sender, RoutedEventArgs e)
@@ -44,6 +45,11 @@ namespace BiblioWPF
         {
             EmprunteurManager win = new EmprunteurManager();
             win.Show();
+        }
+
+        private void close_main_windows(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown(0);
         }
     }
 }

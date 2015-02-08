@@ -36,9 +36,9 @@ namespace StubDataAccessLayer
             Emprunts = new List<Emprunt>();
             Utilisateurs = new List<Utilisateur>();
 
-            Auteurs.Add(new Auteur("John Ronald Reuel", "Tolkien", ESexe.Masculin, new DateTime(1982, 01, 3), new DateTime(1973, 09, 02), true));
-            Auteurs.Add(new Auteur("Joanne", "Rowling", ESexe.Feminin, new DateTime(1965, 07, 31), new DateTime(), true));
-            Auteurs.Add(new Auteur("David Carroll", "Eddings", ESexe.Masculin, new DateTime(1931, 07, 07), new DateTime(2009, 06, 02), true));
+            Auteurs.Add(new Auteur("John Ronald Reuel", "Tolkien", ESexe.Masculin, new DateTime(1892, 01, 3), new DateTime(1973, 09, 02), true));
+            Auteurs.Add(new Auteur("Joanne", "Rowling", ESexe.Feminin, new DateTime(1965, 07, 31), null, true));
+            Auteurs.Add(new Auteur("David Carroll", "Eddings", ESexe.Masculin, new DateTime(1931, 07, 07), new DateTime(2009, 06, 02), false));
 
             Livres.Add(new Livre(Auteurs[2], new DateTime(1989, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 4, "Le Trône de diamant"));
             Livres.Add(new Livre(Auteurs[2], new DateTime(1990, 1, 1), "Editeur", Genre.Fantastique, "1111", 600, 8, "Le Chevalier de rubis"));

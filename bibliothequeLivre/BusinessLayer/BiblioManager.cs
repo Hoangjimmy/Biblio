@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StubDataAccessLayer;
 using EntitiesLayer;
+using System.Reflection;
 
 namespace BusinessLayer
 {
@@ -121,6 +122,39 @@ namespace BusinessLayer
         public static void addAuteur(Auteur auteur)
         {
             DalManager.Instance.Auteurs.Add(auteur);
+        }
+
+        public static IEnumerable<Livre> listeLivre()
+        {
+            return DalManager.Instance.Livres;
+        }
+
+        public static void removeLivre(Livre livre)
+        {
+            DalManager.Instance.Livres.Remove(livre);
+        }
+
+        public static void addLivre(Livre livre)
+        {
+            DalManager.Instance.Livres.Add(livre);
+        }
+
+        public static IEnumerable<Genre> listeGenre()
+        {
+            List<Genre> liste = new List<Genre>();
+
+            liste.Add(Genre.BandeDessinee);
+            liste.Add(Genre.Biographie);
+            liste.Add(Genre.Conte);
+            liste.Add(Genre.Description);
+            liste.Add(Genre.Fantastique);
+            liste.Add(Genre.Horreur);
+            liste.Add(Genre.Name);
+            liste.Add(Genre.Nouvelle);
+            liste.Add(Genre.Roman);
+            liste.Add(Genre.ScienceFiction);
+
+            return liste;
         }
     }
 }

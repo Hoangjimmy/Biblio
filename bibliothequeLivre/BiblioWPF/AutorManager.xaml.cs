@@ -83,7 +83,7 @@ namespace BiblioWPF
             {
                 Auteur auteur = (mListeBoxAuteur.SelectedItem as Auteur);
 
-                /** Suppression de l'emprunteur */
+                /** Suppression de l'auteur */
                 BiblioManager.removeAuteur(auteur);
             }
 
@@ -91,7 +91,7 @@ namespace BiblioWPF
             desactiverFormulaire();
             mButtonAjouter.IsEnabled = true;
 
-            /* On vide les données emprunteur affiches */
+            /* On vide les données auteur affiches */
             viderFormulaire();
         }
 
@@ -110,7 +110,17 @@ namespace BiblioWPF
             bool erreur = false;
 
             /** Test des donnees */
-            
+            if (mDataPickerNaissance.SelectedDate != null && mDataPickerMort.SelectedDate != null)
+            {
+                if (mDataPickerMort.SelectedDate <= mDataPickerNaissance.SelectedDate)
+                {
+                    erreur = true;
+                }
+                if (erreur)
+                {
+                    MessageBox.Show("Il ne peut pas mourrir avant d'etre né !!!");
+                }
+            }
 
             if (mGridItem.DataContext != null)
             {
@@ -122,10 +132,19 @@ namespace BiblioWPF
                 auteur = new Auteur();
             }
 
-            /** Mise a jour de l'emprunteur */
+            /** Mise a jour de l'auteur */
             auteur.Nom = mTextBoxNom.Text;
             auteur.Prenom = mTextBoxPrenom.Text;
             auteur.DateNaissance = mDataPickerNaissance.SelectedDate;
+            auteur.DateMort = mDataPickerMort.SelectedDate;
+            if (mCheckBoxGoncourt.IsChecked != null)
+            {
+                auteur.PrixGoncourt = (bool)mCheckBoxGoncourt.IsChecked;
+            }
+            else
+            {
+                auteur.PrixGoncourt = false;
+            }
             if (mComboBoxSexe.SelectedValue != null)
                 auteur.Sexe = (ESexe)mComboBoxSexe.SelectedValue;
             else
@@ -134,12 +153,12 @@ namespace BiblioWPF
             //MessageBox.Show(mGridItem.DataContext.ToString());
             if (creation)
             {
-                /** Ajout de l'emprunteur */
+                /** Ajout de l'auteur */
                 BiblioManager.addAuteur(auteur);
             }
 
             reloadListe();
-            /* On vide les données emprunteur affiches */
+            /* On vide les données auteurs affiches */
             mListeBoxAuteur.SelectedItem = auteur;
             viderFormulaire();
             /** On enleve toute selection */

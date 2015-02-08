@@ -1,0 +1,26 @@
+﻿<Window x:Class="BiblioWPF.LivreManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:BiblioWPF"
+        Title="LivreManager" Height="350" Width="700" FontSize="20" Background="Gray">
+    <Window.Resources>
+        <DataTemplate x:Key="tListeBoxLivres">
+            <Label Content="{Binding Path=Titre}" Width="auto"/>
+        </DataTemplate>
+    </Window.Resources>
+
+
+
+    <StackPanel Orientation ="Horizontal" Margin="10">
+        <ListBox Name="mListeBoxLivre" ItemTemplate="{StaticResource tListeBoxLivres}" MinWidth="200" MaxWidth="1000" ItemsSource="{Binding Mode=OneWay}" SelectionChanged="mListeBoxLivre_SelectionChanged" />
+
+        <StackPanel Orientation="Vertical" MinWidth="500" MaxWidth="500" Width="500">
+            <my:CtrlLivre x:Name="mUC_livre"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="mButtonSupprimer" MinWidth="150" Width="auto" Content="Supprimer" Click="btnSupprimer_Click"/>
+                <Button Name="mButtonAjouter" MinWidth="150" Width="auto" Content="Ajouter" Click="btnAjouter_Click"/>
+                <Button Name="mButtonModifier" MinWidth="150" Width="auto" Content="Modifier" Click="btnModifier_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

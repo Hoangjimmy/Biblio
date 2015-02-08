@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BiblioWPF.MainWindowsBinding"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindowsBinding" Height="300" Width="400" Background="Gray">
+        Title="MainWindowsBinding" Height="300" Width="400" Background="Gray" Closed="close_main_windows">
     <StackPanel>
         <Grid>
             <Image Height="100"  Source="Image1.png" Margin="0,168" />
