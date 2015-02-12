@@ -156,5 +156,26 @@ namespace BusinessLayer
 
             return liste;
         }
+
+        public static IEnumerable<Emprunt> listeEmprunt()
+        {
+            return DalManager.Instance.Emprunts;
+        }
+
+        public static void removeEmprunt(Emprunt emprunt)
+        {
+            DalManager.Instance.Emprunts.Remove(emprunt);
+        }
+
+        public static void addEmprunt(Emprunt emprunt)
+        {
+            DalManager.Instance.Emprunts.Add(emprunt);
+        }
+
+        public static void updateEmprunt(Emprunt emprunt)
+        {
+            DalManager.Instance.Emprunts.Remove(emprunt);
+            DalManager.Instance.Emprunts.Add(emprunt);
+        }
     }
 }

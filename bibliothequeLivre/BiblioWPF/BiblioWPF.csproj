@@ -53,6 +53,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\EmpruntManagerViewModel.cs" />
+    <Compile Include="ViewModel\EmpruntViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Page Include="AutorManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -64,6 +68,10 @@
     <Page Include="EmprunteurManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\EmpruntManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="FenetreConnexion.xaml">
       <SubType>Designer</SubType>
@@ -89,6 +97,9 @@
     </Compile>
     <Compile Include="EmprunteurManager.xaml.cs">
       <DependentUpon>EmprunteurManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpruntManager.xaml.cs">
+      <DependentUpon>EmpruntManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="FenetreConnexion.xaml.cs">
       <DependentUpon>FenetreConnexion.xaml</DependentUpon>
@@ -144,6 +155,9 @@
       <Project>{f4f5affa-d9a0-4cc3-9a05-dad41b6aaca6}</Project>
       <Name>EntitiesLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

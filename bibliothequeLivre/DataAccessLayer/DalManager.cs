@@ -50,7 +50,7 @@ namespace DataAccessLayer
             while (reader.Read())
             {   
 
-                res.Add(aut);
+                //res.Add(aut);
             }
 
 

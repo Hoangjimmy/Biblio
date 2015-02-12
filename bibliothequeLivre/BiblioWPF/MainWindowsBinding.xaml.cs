@@ -38,7 +38,8 @@ namespace BiblioWPF
 
         private void Button_Click_Emprunts(object sender, RoutedEventArgs e)
         {
-
+            EmpruntManager win = new EmpruntManager();
+            win.Show();
         }
 
         private void Button_Click_Emprunteurs(object sender, RoutedEventArgs e)
