@@ -8,9 +8,9 @@ namespace EntitiesLayer
 {
     public enum ESexe
     {
-        Feminin,
-        Masculin,
-        Indetermine
+        Feminin = 0,
+        Masculin = 1,
+        Indetermine = 2
     }
 
     public class Personne : EntityObject
