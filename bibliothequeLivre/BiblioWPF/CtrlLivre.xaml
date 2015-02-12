@@ -5,6 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              MinHeight="220" MinWidth="300" FontSize="20" Background="Gray">
+    <UserControl.Resources>
+        <DataTemplate x:Key="tGenre">
+            <Label Content="{Binding Path=Nom}" Width="auto"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    
     <StackPanel Orientation ="Horizontal">
         <Grid Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" >
             <Grid.ColumnDefinitions>

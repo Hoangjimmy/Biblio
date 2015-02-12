@@ -97,10 +97,10 @@ namespace DataAccessLayer
         }
         public static Genre getGenreByID(int id)
         {
-            DataTable dt = Datafill("SELECT Nom FROM Genres WHERE ID = " + id);
+            /*DataTable dt = Datafill("SELECT Nom FROM Genres WHERE ID = " + id);
             DataRow dr = dt.Rows[0];
             Genre res = new Genre(id, dr["Nom"].ToString());
-            return res;
+            return res;*/
         }
         public static List<Auteur> getAuteurs() 
         {
@@ -249,7 +249,7 @@ namespace DataAccessLayer
             SqlCommand command = new SqlCommand("UPDATE Emprunts SET ID = @id, ID_LIVRE = @idli, ID_EMPRUNTEUR = @idemp, DATE_DEBUT = @Date debut, DATE_FIN = @datefin, DATE_FIN_PREVUE = @datefinprevu  FROM (SELECT ID FROM Emprunts WHERE ID = @id", connect);            
             command.Parameters.AddWithValue("@id", emp.Id);
             command.Parameters.AddWithValue("@idli", emp.Livre.Id);
-            command.Parameters.AddWithValue("@idemp", emp.Emprunter.Id);
+            command.Parameters.AddWithValue("@idemp", emp.Emprunteur.Id);
             command.Parameters.AddWithValue("@Datedebut", emp.DateDebut);
             command.Parameters.AddWithValue("@datefin", emp.DateFin);
             command.Parameters.AddWithValue("@datefinprevu", emp.DateDebut.AddDays(14));
@@ -311,13 +311,6 @@ namespace DataAccessLayer
             connect.Open();
             command.ExecuteNonQuery();
             connect.Close();
-        }
-
-        public Utilisateur GetUtilisateurByLogin(String login, String mdp)
-        {
-            Utilisateur user = new Utilisateur();
-
-
         }
     }
 }

@@ -22,6 +22,7 @@ namespace EntitiesLayer
         public static readonly Genre Nouvelle = new Genre(7,"Nouvelle");
         public static readonly Genre Roman = new Genre(8,"Roman");
         public static readonly Genre ScienceFiction = new Genre(9,"Science Fiction");
+        private string p;
 
         private Genre(int id, string nom)
         {

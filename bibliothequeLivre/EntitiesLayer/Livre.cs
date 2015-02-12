@@ -27,7 +27,7 @@ namespace EntitiesLayer
             sb.Append("(").Append(Auteur.ToString()).Append("), ")
                 .Append(DateParution.Year).Append(", ")
                 .Append(Editeur).Append(", ")
-                .Append(Genre).Append(", ")
+                .Append(Genre.Nom).Append(", ")
                 .Append(NombrePages).Append(", ")
                 .Append(Note).Append(", ")
                 .Append(Titre);

@@ -24,9 +24,7 @@ namespace BiblioWPF.ViewModel
             _emprunts.Clear();
             foreach (Emprunt a in BusinessLayer.BiblioManager.listeEmprunt())
             {
-                MessageBox.Show(a.Id.ToString());
                 EmpruntViewModel e = new EmpruntViewModel(new Emprunt(a));
-                MessageBox.Show(e.Emprunt.Id.ToString());
                 _emprunts.Add(e);
 
             }
